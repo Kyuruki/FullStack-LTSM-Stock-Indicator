@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { cursor: none !important; }
+
+/* ── Design tokens — dark mode default ─────────────────── */
+:root {
+  --bg:        #0e0e0e;
+  --text:      #ffffff;
+  --secondary: #666666;
+  --border:    #333333;  /* card/divider borders — used by Tasks 6–9 */
+  --input-bd:  #444444;
+  --btn-bg:    #ffffff;
+  --btn-text:  #000000;
+}
+
+/* ── Design tokens — light mode ─────────────────────────── */
+html[data-theme="light"] {
+  --bg:        #ffffff;
+  --text:      #000000;
+  --secondary: #888888;
+  --border:    #000000;  /* card/divider borders — used by Tasks 6–9 */
+  --input-bd:  #000000;
+  --btn-bg:    #000000;
+  --btn-text:  #ffffff;
+}
+
+/* ── Base ──────────────────────────────────────────────── */
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ── Editorial input — bottom border only ──────────────── */
+.input-editorial {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--input-bd);
+  color: var(--text);
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.input-editorial::placeholder {
+  color: var(--secondary);
+}
+
+.input-editorial:focus {
+  border-bottom-color: var(--text);
+}
+
+/* ── Editorial button — solid fill, all-caps ───────────── */
+.btn-primary {
+  width: 100%;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+/* ── All-caps label utility ─────────────────────────────── */
+.label-caps {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* ── Nav link — underline hover ─────────────────────────── */
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Page fade-in ───────────────────────────────────────── */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-fade-in {
+  animation: page-fade-in 250ms ease forwards;
+}
+
+/* ── Skeleton loading pulse ─────────────────────────────── */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.15; }
+}
+
+/* ── Responsive nav ────────────────────────────────────── */
+@media (max-width: 767px) {
+  .desktop-nav   { display: none; }
+  .hamburger-btn { display: flex; }
+}
+
+@media (min-width: 768px) {
+  .desktop-nav   { display: flex; }
+  .hamburger-btn { display: none; }
+  .mobile-menu   { display: none !important; }
+}

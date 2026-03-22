@@ -1,0 +1,33 @@
+# Backend weights (large binary files)
+backend/weights/*.pt
+backend/weights/*.pkl
+
+# Python cache
+__pycache__/
+**/__pycache__/
+backend/.pytest_cache/
+*.py[cod]
+*.pyo
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment files
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+
+# Git worktrees
+.worktrees/

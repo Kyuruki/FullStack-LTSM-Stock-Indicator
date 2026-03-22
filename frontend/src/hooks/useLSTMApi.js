@@ -2,7 +2,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useNotification } from './useNotification'
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'http://localhost:8000'
 const POLL_INTERVAL = 2000
 
 /**

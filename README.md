@@ -4,6 +4,9 @@ A full-stack web application that trains a Long Short-Term Memory (LSTM) neural 
 
 ---
 
+![ezgif-4a736dd1696a6544](https://github.com/user-attachments/assets/d23f1340-6888-4ac5-b942-99420d88f834)
+
+
 ## Features
 
 - Train a per-ticker LSTM model directly from the UI
@@ -11,7 +14,7 @@ A full-stack web application that trains a Long Short-Term Memory (LSTM) neural 
 - 7-day autoregressive price forecast
 - Live training progress bar with RMSE metrics
 - Watchlist with local persistence
-- Dark-themed dashboard built with React + TailwindCSS
+- Dark-themed/Light Themed dashboard built with React + TailwindCSS
 
 ---
 
@@ -42,7 +45,7 @@ FullStack-LTSM-Stock-Indicator/
 │   │   └── utils/
 │   ├── index.html
 │   └── package.json
-└── Main.ipynb           # Exploratory notebook
+└── Main.ipynb           # Exploratory notebook from my previous repository
 ```
 
 ---

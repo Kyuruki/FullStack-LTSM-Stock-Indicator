@@ -4,7 +4,7 @@ A full-stack web application that trains a Long Short-Term Memory (LSTM) neural 
 
 ---
 
-https://github.com/user-attachments/assets/2f31a31a-ad48-404d-86a6-88847fe05d5e
+https://github.com/user-attachments/assets/0d1b2016-7b57-4a12-b81e-f54a4ca1135c
 
 ## Features
 
